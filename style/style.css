@@ -48,44 +48,6 @@ a {
   font-weight: 600;
 }
 
-@media screen and (min-width: 601px) {
-  .header {
-    grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: "logo . navbar button";
-  }
-  .headerNavLink[data-active=true] {
-    border-top: 3px solid #0065FC;
-  }
-  .headerNavLink:hover {
-    border-top: 3px solid #0065FC;
-  }
-}
-@media screen and (max-width: 600px) {
-  .header {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "logo . button" "navbar navbar navbar";
-  }
-  .headerimg {
-    order: 0;
-  }
-  .headerSignup {
-    order: 1;
-  }
-  .headerNav {
-    order: 2;
-  }
-  .headerNavLink {
-    border-top: none;
-    border-bottom: 3px solid #F2F2F2;
-    width: 50%;
-  }
-  .headerNavLink[data-active=true] {
-    border-bottom-color: #0065FC;
-  }
-  .headerNavLink:hover {
-    border-bottom-color: #0065FC;
-  }
-}
 .main {
   max-width: 1440px;
   margin: auto;
@@ -211,37 +173,6 @@ a {
   margin: 0;
 }
 
-@media screen and (max-width: 600px) {
-  .searchForm {
-    display: flex;
-    width: 100%;
-  }
-  .searchFormSearchinput {
-    flex: 1;
-  }
-  .searchFormSubmitinputText {
-    display: none;
-  }
-  .searchFormSubmitinputIcon {
-    display: block;
-  }
-}
-@media screen and (max-width: 650px) {
-  .searchFiltersTitle {
-    width: 100%;
-  }
-  .searchFiltersFilter {
-    margin-right: 1rem;
-  }
-}
-@media screen and (min-width: 601px) {
-  .searchFormSubmitinputText {
-    display: block;
-  }
-  .searchFormSubmitinputIcon {
-    display: none !important;
-  }
-}
 .hostingWrapper, .hostingPopular, .hostingMain {
   background-color: #F2F2F2;
   border-radius: 1.5rem;
@@ -351,6 +282,161 @@ a {
   height: 8.75rem;
 }
 
+.activity {
+  display: grid;
+  column-gap: 2rem;
+  margin: 4rem 0;
+}
+.activityTitle {
+  grid-column: 1/-1;
+}
+.activityCard {
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
+}
+.activityCard:hover {
+  transform: scale(1.01);
+}
+.activityCardWrapimg {
+  position: relative;
+  flex: 1;
+}
+.activityCardWrapimgImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.activityCardTitle {
+  margin: 1.2rem 1.5rem;
+}
+
+.footer {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+.footerColumnwrapper {
+  display: flex;
+  max-width: 100%;
+  width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.footerColumnwrapperColumn {
+  width: 30%;
+  padding: 2rem 2rem;
+}
+.footerColumnwrapperColumnLink {
+  display: block;
+  margin: 1rem 0;
+}
+.footerColumnwrapperColumnLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  .footerColumnwrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .footerColumnwrapperColumn {
+    width: 100%;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .footerColumnwrapperColumn:first-child {
+    margin-top: 0;
+  }
+  .footerColumnwrapperColumn:last-child {
+    margin-bottom: 0;
+  }
+  .footerColumnwrapperColumnTitle {
+    margin: 0;
+  }
+  .footerColumnwrapperColumnLink:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .header {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar button";
+  }
+  .headerNavLink[data-active=true] {
+    border-top: 3px solid #0065FC;
+  }
+  .headerNavLink:hover {
+    border-top: 3px solid #0065FC;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo . button" "navbar navbar navbar";
+  }
+  .headerimg {
+    order: 0;
+  }
+  .headerSignup {
+    order: 1;
+  }
+  .headerNav {
+    order: 2;
+  }
+  .headerNavLink {
+    border-top: none;
+    border-bottom: 3px solid #F2F2F2;
+    width: 50%;
+  }
+  .headerNavLink[data-active=true] {
+    border-bottom-color: #0065FC;
+  }
+  .headerNavLink:hover {
+    border-bottom-color: #0065FC;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchForm {
+    display: flex;
+    width: 100%;
+  }
+  .searchFormSearchinput {
+    flex: 1;
+  }
+  .searchFormSubmitinputText {
+    display: none;
+  }
+  .searchFormSubmitinputIcon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .searchFiltersTitle {
+    width: 100%;
+  }
+  .searchFiltersFilter {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .searchFormSubmitinputText {
+    display: block;
+  }
+  .searchFormSubmitinputIcon {
+    display: none !important;
+  }
+}
+
 @media (max-width: 1440px) {
   .hosting {
     grid-template-columns: 1fr;
@@ -386,38 +472,6 @@ a {
     grid-template-columns: 1fr;
     grid-template-rows: auto repeat(3, 9rem);
   }
-}
-.activity {
-  display: grid;
-  column-gap: 2rem;
-  margin: 4rem 0;
-}
-.activityTitle {
-  grid-column: 1/-1;
-}
-.activityCard {
-  box-shadow: 0 0 20px #0000002e;
-  border-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition-duration: 0.1s;
-}
-.activityCard:hover {
-  transform: scale(1.01);
-}
-.activityCardWrapimg {
-  position: relative;
-  flex: 1;
-}
-.activityCardWrapimgImg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.activityCardTitle {
-  margin: 1.2rem 1.5rem;
 }
 
 @media (min-width: 1100px) {
@@ -471,51 +525,3 @@ a {
     grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
   }
 }
-.footer {
-  background-color: #F2F2F2;
-  width: 100%;
-}
-.footerColumnwrapper {
-  display: flex;
-  max-width: 100%;
-  width: 1440px;
-  margin: auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-.footerColumnwrapperColumn {
-  width: 30%;
-  padding: 2rem 2rem;
-}
-.footerColumnwrapperColumnLink {
-  display: block;
-  margin: 1rem 0;
-}
-.footerColumnwrapperColumnLink:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 750px) {
-  .footerColumnwrapper {
-    flex-direction: column;
-    padding: 2rem;
-  }
-  .footerColumnwrapperColumn {
-    width: 100%;
-    padding: 0;
-    margin: 1rem 0;
-  }
-  .footerColumnwrapperColumn:first-child {
-    margin-top: 0;
-  }
-  .footerColumnwrapperColumn:last-child {
-    margin-bottom: 0;
-  }
-  .footerColumnwrapperColumnTitle {
-    margin: 0;
-  }
-  .footerColumnwrapperColumnLink:last-child {
-    margin-bottom: 0;
-  }
-}
-
