@@ -436,7 +436,6 @@ a {
     display: none !important;
   }
 }
-
 @media (max-width: 1440px) {
   .hosting {
     grid-template-columns: 1fr;
